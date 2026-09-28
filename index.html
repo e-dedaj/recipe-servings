@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Recipe servings</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#recipe">Skip to recipe</a>
+
+  <header class="page-header">
+    <h1>Petulla</h1>
+    <p>Albanian fried dough, crisp outside and soft inside. Change the servings and every quantity follows.</p>
+  </header>
+
+  <main id="recipe" tabindex="-1">
+    <section class="servings" aria-labelledby="servings-label">
+      <label id="servings-label" for="servings">Servings</label>
+      <div class="stepper">
+        <button type="button" id="fewer" aria-label="Fewer servings" aria-controls="servings">&minus;</button>
+        <input id="servings" type="number" inputmode="numeric" min="1" max="24" step="1" value="4">
+        <button type="button" id="more" aria-label="More servings" aria-controls="servings">+</button>
+      </div>
+    </section>
+
+    <p id="status" class="sr-only" role="status" aria-live="polite"></p>
+
+    <div class="switcher" role="group" aria-label="Show ingredients or method">
+      <button type="button" id="show-ingredients" aria-pressed="true" aria-controls="ingredients-panel">Ingredients</button>
+      <button type="button" id="show-method" aria-pressed="false" aria-controls="method-panel">Method</button>
+    </div>
+
+    <div class="columns">
+      <section id="ingredients-panel" class="panel" aria-labelledby="ingredients-heading">
+        <h2 id="ingredients-heading">Ingredients for <span id="count">4</span> <span id="count-noun">servings</span></h2>
+        <ul id="ingredients" class="ingredients">
+          <li data-qty="500" data-unit="g"><span class="qty">500 g</span> <span class="name">plain flour</span></li>
+          <li data-qty="7" data-unit="g"><span class="qty">7 g</span> <span class="name">dry yeast</span></li>
+          <li data-qty="1" data-unit="tsp"><span class="qty">1 tsp</span> <span class="name">sugar</span></li>
+          <li data-qty="1" data-unit="tsp"><span class="qty">1 tsp</span> <span class="name">salt</span></li>
+          <li data-qty="350" data-unit="ml"><span class="qty">350 ml</span> <span class="name">warm water</span></li>
+          <li><span class="qty">As needed</span> <span class="name">sunflower oil, for frying</span></li>
+          <li><span class="qty">To serve</span> <span class="name">feta or jam</span></li>
+        </ul>
+      </section>
+
+      <section id="method-panel" class="panel" aria-labelledby="method-heading">
+        <h2 id="method-heading">Method</h2>
+        <ol class="method">
+          <li>Stir the yeast and sugar into the warm water and leave for 5 minutes, until foamy.</li>
+          <li>Mix the flour and salt in a large bowl. Pour in the yeast water and mix into a sticky, soft dough.</li>
+          <li>Cover and let it rise in a warm place for about 1 hour, until doubled.</li>
+          <li>Heat 3 cm of oil in a deep pan over medium heat.</li>
+          <li>With oiled hands, pull off pieces of dough, stretch them flat and lower them into the oil.</li>
+          <li>Fry 2 to 3 minutes per side until golden, then drain on paper. Serve warm.</li>
+        </ol>
+      </section>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
