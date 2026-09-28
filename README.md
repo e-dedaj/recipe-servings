@@ -42,6 +42,6 @@ Tradeoff: a reader cannot see both at once on a phone. I chose this over an acco
 
 ## Manual checks I ran
 
-- Keyboard only, from the skip link to the last step, without a mouse.
-- 320px wide in the browser dev tools: no horizontal scroll.
-- Screen reader : quantity announcement after pressing plus.
+- Keyboard only, from the skip link to the last step, without a mouse: works.
+- 320px wide in browser dev tools: no horizontal scroll.
+- Screen reader: tested with NVDA on Windows, the quantity announcement is read after pressing "More servings".
